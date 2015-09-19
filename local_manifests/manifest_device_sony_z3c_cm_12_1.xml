@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+<!-- lunch cm_z3c-userdebug -->
+
+<!-- Sony Device Remote-->
+<!-- <remote name="sony" fetch="git://github.com/sonyxperiadev/" /> -->
+
+<!-- hybris/droid/hal repositories for the z3c -->
+<project path="rpm" name="xperiasailors/droid-hal-z3c" remote="github" revision="master" />
+<project path="hybris/droid-configs" name="xperiasailors/droid-config-z3c" remote="github" revision="master"/>
+<project path="hybris/droid-hal-version-z3c" name="xperiasailors/droid-hal-version-z3c" remote="github" revision="master"/>
+
+<!-- Sony Device Repos-->
+
+<!-- Original Sony Device Repos-->
+<!--
+<project path="device/sony/aries" name="device-sony-aries" groups="device" remote="sony" revision="l-mr1" />
+<project path="device/sony/shinano" name="device-sony-shinano" groups="device" remote="sony" revision="l-mr1" />
+-->
+
+<!-- Cyanogenmod Sony Device Repos-->
+<!--
+<project path="device/sony/shinano-common" name="CyanogenMod/android_device_sony_shinano-common" />
+<project path="device/sony/z3c" name="CyanogenMod/android_device_sony_z3c" />
+-->
+<project path="device/sony/shinano-common" name="xperiasailors/android_device_sony_shinano-common" />
+<project path="device/sony/z3c" name="xperiasailors/android_device_sony_z3c" />
+
+<project path="device/sony/common" name="CyanogenMod/android_device_sony_common" />
+<project path="device/sony/msm8974-common" name="CyanogenMod/android_device_sony_msm8974-common" />
+<project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" />
+
+<project path="hardware/sony/thermanager" name="CyanogenMod/android_hardware_sony_thermanager" />
+
+<!-- Sony Device Kernel -->
+<!--
+<project path="kernel/sony/msm" name="kernel" groups="device" remote="sony" revision="aosp/AU_LINUX_ANDROID_LA.BF64.1.2.1_RB1.05.00.02.019.067" />
+-->
+<!--
+<project path="kernel/sony/msm8974" name="CyanogenMod/android_kernel_sony_msm8974" />
+-->
+<project path="kernel/sony/msm8974" name="xperiasailors/android_kernel_sony_msm8974" />
+
+<!-- Other Sony Drivers used in AOSP5, but not CM12.1 -->
+<!--
+<project path="vendor/sony/system/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
+<project path="vendor/sony/system/mkqcdtbootimg" name="mkqcdtbootimg" groups="device" remote="sony" revision="master" />
+<project path="vendor/sony/system/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
+<project path="vendor/sony/system/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
+-->
+
+<!-- sepolicy is needed to build CM12.1; we disable later in the kernel boot options --->
+
+<!--
+<project path="device/qcom/sepolicy" name="device-qcom-sepolicy" groups="device" remote="sony" revision="l-mr1" />
+-->
+<project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" />
+
+<!-- Proprietary blobs and firmware -->
+<project name="TheMuppets/proprietary_vendor_sony" path="vendor/sony" remote="github" />
+<!--
+Alternately, you can follow the directions on https://wiki.cyanogenmod.org/w/Build_for_sirius#Extract_proprietary_blobs
+to pull the blobs off of your device (assuming it is currently running cm12.1) and into your build tree:
+
+Once you have your z3c connected in adb mode, You need to run the ./extract-files.sh script in each of the directories:
+
+cd device/sony/msm8974-common
+./extract-files.sh
+cd device/sony/shinano-common
+./extract-files.sh
+cd device/sony/z3c
+./extract-files.sh
+
+-->
+
+<!-- Device Info -->
+<project path="hardware/broadcom/libbt" name="CyanogenMod/android_hardware_broadcom_libbt" groups="pdk" />
+<project path="hardware/broadcom/wlan" name="CyanogenMod/android_hardware_broadcom_wlan" groups="broadcom_wlan" />
+
+  <project path="hardware/qcom/audio/default" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" />
+  <!--
+  <project path="hardware/qcom/audio-caf/apq8084" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-12.1-caf-8084" />
+  <project path="hardware/qcom/audio-caf/msm8916" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-12.1-caf-8916" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-12.1-caf-8960" />
+  -->
+  <project path="hardware/qcom/audio-caf/msm8974" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-12.1-caf-8974" />
+  <project path="hardware/qcom/audio-caf/msm8994" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-12.1-caf-8994" />
+  <project path="hardware/qcom/bt" name="CyanogenMod/android_hardware_qcom_bt" groups="qcom" />
+  <project path="hardware/qcom/display" name="CyanogenMod/android_hardware_qcom_display" groups="qcom,qcom_display" />
+  <!--
+  <project path="hardware/qcom/display-caf/apq8084" name="CyanogenMod/android_hardware_qcom_display" groups="qcom,qcom_display" revision="cm-12.1-caf-8084" />
+  <project path="hardware/qcom/display-caf/msm8916" name="CyanogenMod/android_hardware_qcom_display" groups="qcom,qcom_display" revision="cm-12.1-caf-8916" />
+  <project path="hardware/qcom/display-caf/msm8960" name="CyanogenMod/android_hardware_qcom_display" groups="qcom,qcom_display" revision="cm-12.1-caf-8960" />
+  -->
+  <project path="hardware/qcom/display-caf/msm8974" name="CyanogenMod/android_hardware_qcom_display" groups="qcom,qcom_display" revision="cm-12.1-caf-8974" />
+  <project path="hardware/qcom/display-caf/msm8994" name="CyanogenMod/android_hardware_qcom_display" groups="qcom,qcom_display" revision="cm-12.1-caf-8994" />
+  <project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" groups="qcom" />
+  <project path="hardware/qcom/keymaster" name="CyanogenMod/android_hardware_qcom_keymaster" groups="qcom" />
+  <project path="hardware/qcom/media/default" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" />
+  <!--
+  <project path="hardware/qcom/media-caf/apq8084" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8084" />
+  <project path="hardware/qcom/media-caf/msm8916" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8916" />
+  <project path="hardware/qcom/media-caf/msm8960" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8960" />
+  -->
+  <project path="hardware/qcom/media-caf/msm8974" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8974" />
+  <project path="hardware/qcom/media-caf/msm8994" name="CyanogenMod/android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8994" />
+  <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" remote="aosp" />
+  <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" groups="qcom_msm8x26" remote="aosp" />
+  <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" groups="qcom_msm8x27" remote="aosp" />
+  <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="qcom_msm8x74" remote="aosp" />
+  <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" groups="qcom_msm8x84" remote="aosp" />
+  <project path="hardware/qcom/wlan" name="CyanogenMod/android_hardware_qcom_wlan" groups="qcom_wlan" />
+
+
+
+</manifest>
