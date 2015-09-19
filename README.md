@@ -9,3 +9,5 @@ repo init -u https://github.com/CyanogenMod/android.git -b cm-12.1
 
 and then overwride the default manifest:
 repo init -m manifest_default_hybris_cm_12_1.xml
+
+The files in the local_manifests will automatically be picked up by repo (no action needed).
