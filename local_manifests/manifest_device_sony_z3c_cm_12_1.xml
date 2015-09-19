@@ -24,12 +24,13 @@
 <!--
 <project path="device/sony/shinano-common" name="CyanogenMod/android_device_sony_shinano-common" />
 <project path="device/sony/z3c" name="CyanogenMod/android_device_sony_z3c" />
+<project path="device/sony/msm8974-common" name="CyanogenMod/android_device_sony_msm8974-common" />
 -->
 <project path="device/sony/shinano-common" name="xperiasailors/android_device_sony_shinano-common" />
 <project path="device/sony/z3c" name="xperiasailors/android_device_sony_z3c" />
+<project path="device/sony/msm8974-common" name="xperiasailors/android_device_sony_msm8974-common" />
 
 <project path="device/sony/common" name="CyanogenMod/android_device_sony_common" />
-<project path="device/sony/msm8974-common" name="CyanogenMod/android_device_sony_msm8974-common" />
 <project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" />
 
 <project path="hardware/sony/thermanager" name="CyanogenMod/android_hardware_sony_thermanager" />
@@ -59,7 +60,13 @@
 <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" />
 
 <!-- Proprietary blobs and firmware -->
+
+<!-- proprietary blobs are not required to build hybris-hal, but must already be on the device (e.g. through cm12.1) -->
+
+<!--
 <project name="TheMuppets/proprietary_vendor_sony" path="vendor/sony" remote="github" />
+-->
+
 <!--
 Alternately, you can follow the directions on https://wiki.cyanogenmod.org/w/Build_for_sirius#Extract_proprietary_blobs
 to pull the blobs off of your device (assuming it is currently running cm12.1) and into your build tree:

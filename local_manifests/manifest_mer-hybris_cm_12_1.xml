@@ -12,6 +12,7 @@
   </project>
 
   <project path="hybris/hybris-boot" name="mer-hybris/hybris-boot" remote="github" revision="master" />
+  
   <project path="hybris/mer-kernel-check" name="mer-hybris/mer-kernel-check" remote="github" revision="master" />
   <project path="external/droidmedia" name="sailfishos/droidmedia" revision="master" />
   
