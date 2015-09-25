@@ -52,7 +52,7 @@
 <project path="vendor/sony/system/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
 -->
 
-<!-- sepolicy is needed to build CM12.1; we disable later in the kernel boot options --->
+<!-- sepolicy is needed to build CM12.1, we disable later in the kernel boot options -->
 
 <!--
 <project path="device/qcom/sepolicy" name="device-qcom-sepolicy" groups="device" remote="sony" revision="l-mr1" />
